@@ -3,17 +3,18 @@ package main
 import (
 	"fmt"
 	"log"
-	"os"
 
 	"net/http"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello from service C")
-	os.Exit(0)
+	fmt.Println("Service c tousched")
 }
 
 func main() {
 	http.HandleFunc("/", handler)
+	fmt.Println("Service C initializing...")
 	log.Fatal(http.ListenAndServe(":8083", nil))
+	fmt.Println("Service C stopped")
 }
