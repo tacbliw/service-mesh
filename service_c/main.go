@@ -8,7 +8,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-
+	fmt.Println("Service C touched!!!")
 	fmt.Fprintf(w, "Hello from service C")
 }
 
