@@ -49,3 +49,7 @@ static_resources:
             socket_address:
               address: "service_c"
               port_value: 8083
+          - 
+            socket_address:
+              address: "service_c_2"
+              port_value: 8083
