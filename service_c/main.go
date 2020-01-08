@@ -13,7 +13,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/", handler)
+	http.HandleFunc("/testapi", handler)
 	fmt.Println("Service C initializing...")
 	log.Fatal(http.ListenAndServe(":8083", nil))
 	fmt.Println("Service C stopped")
