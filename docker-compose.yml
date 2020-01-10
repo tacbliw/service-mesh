@@ -63,3 +63,5 @@ services:
 
   service_c_2:
     build: service_c/
+    ports: 
+    - "8084:8083"
