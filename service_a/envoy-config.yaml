@@ -130,3 +130,7 @@ static_resources:
             socket_address:
               address: "service_c_envoy"
               port_value: 8790
+          -
+            socket_address:
+              address: "service_c_envoy_2"
+              port_value: 8790

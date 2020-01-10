@@ -47,5 +47,5 @@ static_resources:
         hosts:
           -
             socket_address:
-              address: "service_c"
+              address: "service_c_2"
               port_value: 8083
