@@ -51,7 +51,7 @@ services:
     image: envoyproxy/envoy-alpine:v1.7.0
     volumes:
     - ./service_c/envoy-config-2.yaml:/etc/envoy-config.yaml
-    10ports:
+    ports:
       - "8791:8791"
       - "9904:9901"
     command: "/usr/local/bin/envoy -c /etc/envoy-config.yaml --v2-config-only -l info --service-cluster 'service-c' --service-node 'service-c' --log-format '[METADATA][%Y-%m-%d %T.%e][%t][%l][%n] %v'"  
