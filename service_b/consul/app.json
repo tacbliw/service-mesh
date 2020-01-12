@@ -1,0 +1,18 @@
+{
+  "service": {
+    "name": "go",
+    "tags": [
+      "go",
+      "production"
+    ],
+    "port": 8788,
+    "connect": { "sidecar_service": {} },
+    "check": {
+      "id": "service_b",
+      "name": "service_b TCP on port 8788",
+      "tcp": "localhost:8788",
+      "interval": "10s",
+      "timeout": "1s"
+    }
+  }
+}

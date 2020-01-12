@@ -1,0 +1,33 @@
+{
+  "service": {
+    "name": "go",
+    "tags": [
+      "go",
+      "production"
+    ],
+    "port": 80,
+    "connect": {
+      "sidecar_service": {
+        "proxy": {
+          "upstreams": [
+            {
+              "destination_name": "service_b",
+              "local_bind_port": 8788
+            },
+            {
+              "destination_name": "service_c",
+              "local_bind_port": 8791
+            }
+          ]
+        }
+      }
+    },
+    "check": {
+      "id": "service_a",
+      "name": "service_a TCP on port 80",
+      "tcp": "localhost:80",
+      "interval": "10s",
+      "timeout": "1s"
+    }
+  }
+}

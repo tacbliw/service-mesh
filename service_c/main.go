@@ -8,13 +8,13 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello from service C")
+	fmt.Fprintf(w, "Hello from service C  ")
 	fmt.Println("Service c touched")
 }
 
 func main() {
-	http.HandleFunc("/testapi", handler)
+	http.HandleFunc("/", handler)
 	fmt.Println("Service C initializing...")
-	log.Fatal(http.ListenAndServe(":8083", nil))
+	log.Fatal(http.ListenAndServe(":8791", nil))
 	fmt.Println("Service C stopped")
 }
