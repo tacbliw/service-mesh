@@ -14,17 +14,3 @@ services:
       - "80:80"
     volumes:
       - ./service_a/consul:/consul/config
-
-  service_b:
-    build: service_b/
-    ports:
-      - "8788:8788"
-    volumes:
-      - ./service_a/consul:/consul/config
-
-  service_c:
-    build: service_c/
-    ports:
-      - "8791:8791"
-    volumes:
-      - ./service_a/consul:/consul/config
