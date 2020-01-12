@@ -1,4 +1,5 @@
 #!/bin/sh
+go run main.go &
 sleep 4
 consul agent -config-dir /consul/config &
 sleep 4
@@ -7,6 +8,4 @@ echo
 echo starting envoy
 echo 
 echo
-consul connect envoy -sidecar-for service_c > /envoy.out &
-sleep 4
-go run main.go
+consul connect envoy -sidecar-for service_c > /envoy.out
