@@ -1,6 +1,6 @@
 {
   "service": {
-    "name": "go",
+    "name": "service_c",
     "tags": [
       "go",
       "production"
