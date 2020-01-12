@@ -2,7 +2,7 @@
     "bootstrap_expect": 1,
     "bind_addr": "0.0.0.0",
     "client_addr": "0.0.0.0",
-    "datacenter": "Us-Central",
+    "datacenter": "dc1",
     "data_dir": "/var/consul",
     "domain": "consul",
     "enable_script_checks": true,
