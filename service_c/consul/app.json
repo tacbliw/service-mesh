@@ -10,7 +10,7 @@
     "check": {
       "id": "service_c",
       "name": "service_c TCP on port 8791",
-      "tcp": "localhost:8791",
+      "tcp": "service_c:8791",
       "interval": "10s",
       "timeout": "1s"
     }

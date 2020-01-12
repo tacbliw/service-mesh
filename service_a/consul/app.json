@@ -25,7 +25,7 @@
     "check": {
       "id": "service_a",
       "name": "service_a TCP on port 80",
-      "tcp": "localhost:80",
+      "tcp": "service_a:80",
       "interval": "10s",
       "timeout": "1s"
     }
