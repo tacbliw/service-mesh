@@ -1,16 +1,16 @@
 {
   "service": {
-    "name": "service_c",
+    "name": "service-b",
     "tags": [
       "go",
       "production"
     ],
-    "port": 8791,
+    "port": 8788,
     "connect": { "sidecar_service": {} },
     "check": {
-      "id": "service_c",
-      "name": "service_c TCP on port 8791",
-      "tcp": "service_c:8791",
+      "id": "service-b",
+      "name": "service-b TCP on port 8788",
+      "tcp": "service-b:8788",
       "interval": "10s",
       "timeout": "1s"
     }

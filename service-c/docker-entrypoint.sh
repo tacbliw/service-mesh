@@ -8,4 +8,4 @@ echo
 echo starting envoy
 echo 
 echo
-consul connect envoy -sidecar-for service_a > /envoy.out
+consul connect envoy -sidecar-for service-c > /envoy.out

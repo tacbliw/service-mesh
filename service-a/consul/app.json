@@ -1,6 +1,6 @@
 {
   "service": {
-    "name": "service_a",
+    "name": "service-a",
     "tags": [
       "go",
       "production"
@@ -11,11 +11,11 @@
         "proxy": {
           "upstreams": [
             {
-              "destination_name": "service_b",
+              "destination_name": "service-b",
               "local_bind_port": 8788
             },
             {
-              "destination_name": "service_c",
+              "destination_name": "service-c",
               "local_bind_port": 8791
             }
           ]
@@ -23,9 +23,9 @@
       }
     },
     "check": {
-      "id": "service_a",
-      "name": "service_a TCP on port 80",
-      "tcp": "service_a:80",
+      "id": "service-a",
+      "name": "service-a TCP on port 80",
+      "tcp": "service-a:80",
       "interval": "10s",
       "timeout": "1s"
     }

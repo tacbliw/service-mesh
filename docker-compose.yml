@@ -1,16 +1,16 @@
 version: '3'
 services:
-  consul_server:
+  consul-server:
     image: consul:latest
     ports:
       - "8500:8500"
       - "8600:8600"
     volumes:
       - ./server.json:/consul/config/server.json
-      
-  service_b:
-    build: service_b/
+
+  service-b:
+    build: service-b/
     ports:
       - "8788:8788"
     volumes:
-      - ./service_a/consul:/consul/config
+      - ./service-b/consul:/consul/config

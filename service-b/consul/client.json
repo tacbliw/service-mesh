@@ -18,9 +18,9 @@
       "grpc": 8502
     },
     "start_join": [
-      "consul_server:8301"
+      "consul-server:8301"
     ],
     "retry_join": [
-      "consul_server:8301"
+      "consul-server:8301"
     ]
   }

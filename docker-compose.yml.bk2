@@ -1,6 +1,6 @@
 version: '3'
 services:
-  consul_server:
+  consul-server:
     image: consul:latest
     ports:
       - "8500:8500"
@@ -8,23 +8,23 @@ services:
     volumes:
       - ./server.json:/consul/config/server.json
 
-  service_a:
-    build: service_a/
+  service-a:
+    build: service-a/
     ports:
       - "80:80"
     volumes:
-      - ./service_a/consul:/consul/config
+      - ./service-a/consul:/consul/config
 
-  service_b:
-    build: service_b/
+  service-b:
+    build: service-b/
     ports:
       - "8788:8788"
     volumes:
-      - ./service_a/consul:/consul/config
+      - ./service-b/consul:/consul/config
 
-  service_c:
-    build: service_c/
+  service-c:
+    build: service-c/
     ports:
       - "8791:8791"
     volumes:
-      - ./service_a/consul:/consul/config
+      - ./service-c/consul:/consul/config
