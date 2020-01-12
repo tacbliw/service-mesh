@@ -1,6 +1,6 @@
 FROM consul
-FROM envoyproxy/envoy-alpine:v1.9.1
-FROM golang:alpine
+FROM envoyproxy/envoy:v1.9.1
+FROM golang
 
 WORKDIR /app
 COPY --from=0 /bin/consul /usr/local/bin/consul
