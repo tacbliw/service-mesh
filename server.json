@@ -1,5 +1,6 @@
 {
     "bootstrap_expect": 1,
+    "bind_addr": "0.0.0.0",
     "client_addr": "0.0.0.0",
     "datacenter": "Us-Central",
     "data_dir": "/var/consul",
@@ -15,11 +16,5 @@
     "log_level": "INFO",
     "rejoin_after_leave": true,
     "server": true,
-    "start_join": [
-        "consul_server"
-    ],
-    "retry_join": [
-        "consul_server"
-    ],
     "ui": true
 }
