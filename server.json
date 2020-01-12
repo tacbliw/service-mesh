@@ -15,8 +15,5 @@
     "log_level": "INFO",
     "rejoin_after_leave": true,
     "server": true,
-    "start_join": [
-        "consul_server"
-    ],
     "ui": true
 }
