@@ -5,7 +5,7 @@
     "encrypt": "goplCZgdmOFMZ2Q43To0jw==",
     "data_dir": "/consul/data",
     "log_level": "INFO",
-    "node_name": "Application",
+    "node_name": "Service A",
     "server": false,
     "ui": false,
     "leave_on_terminate": false,
