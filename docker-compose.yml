@@ -7,10 +7,10 @@ services:
       - "8600:8600"
     volumes:
       - ./server.json:/consul/config/server.json
-
-  service_a:
-    build: service_a/
+      
+  service_b:
+    build: service_b/
     ports:
-      - "80:80"
+      - "8788:8788"
     volumes:
       - ./service_a/consul:/consul/config
