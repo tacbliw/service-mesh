@@ -2,6 +2,7 @@
     "datacenter": "dc1",
     "bind_addr": "0.0.0.0",
     "client_addr": "0.0.0.0",
+    "encrypt": "goplCZgdmOFMZ2Q43To0jw==",
     "data_dir": "/consul/data",
     "log_level": "INFO",
     "node_name": "Application",
