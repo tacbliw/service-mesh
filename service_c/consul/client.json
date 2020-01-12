@@ -16,6 +16,9 @@
     "ports": {
       "grpc": 8502
     },
+    "start_join": [
+      "consul_server"
+    ],
     "retry_join": [
       "consul_server:8301"
     ]
