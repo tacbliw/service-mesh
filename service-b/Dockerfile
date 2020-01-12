@@ -1,5 +1,5 @@
 FROM consul
-FROM envoyproxy/envoy:v1.9.1
+FROM envoyproxy/envoy-alpine:v1.9.1
 FROM golang
 
 WORKDIR /app
