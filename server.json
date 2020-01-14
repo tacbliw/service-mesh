@@ -1,5 +1,5 @@
 {
-    "bootstrap_expect": 1,
+    "bootstrap_expect": 3,
     "bind_addr": "0.0.0.0",
     "client_addr": "0.0.0.0",
     "datacenter": "dc1",
@@ -16,5 +16,15 @@
     "log_level": "INFO",
     "rejoin_after_leave": true,
     "server": true,
-    "ui": true
+    "ui": true,
+    "start_join": [
+        "consul-server-1:8301",
+        "consul-server-2:8301",
+        "consul-server-3:8301"
+    ],
+    "retry_join": [
+        "consul-server-1:8301",
+        "consul-server-2:8301",
+        "consul-server-3:8301"
+    ]
 }
