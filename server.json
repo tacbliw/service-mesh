@@ -3,7 +3,7 @@
     "bind_addr": "0.0.0.0",
     "client_addr": "0.0.0.0",
     "datacenter": "dc1",
-    "data_dir": "/var/consul",
+    "data_dir": "/consul/data",
     "domain": "consul",
     "enable_script_checks": true,
     "dns_config": {
@@ -16,7 +16,9 @@
     "log_level": "INFO",
     "rejoin_after_leave": true,
     "server": true,
-    "ui": true,
+    "connect": {
+        "enabled": true
+    },
     "start_join": [
         "consul-server-1:8301",
         "consul-server-2:8301",
@@ -26,5 +28,6 @@
         "consul-server-1:8301",
         "consul-server-2:8301",
         "consul-server-3:8301"
-    ]
+    ],
+    "ui": true
 }
