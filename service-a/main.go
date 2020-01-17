@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-
 	"net/http"
 )
 
@@ -38,7 +37,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("%s", err)
 	}
 	fmt.Fprintf(w, string(body))
-	fmt.Fprintf(w, "<br>Hello from service A  ")
+	fmt.Fprintf(w, " Hello from service A ")
 
 	req, err = http.NewRequest("GET", "http://localhost:8791/", nil)
 	if err != nil {
