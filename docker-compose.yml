@@ -7,19 +7,19 @@ services:
       - "8600:8600"
     volumes:
       - ./server.json:/consul/config/server.json
-    command: "consul agent -config-dir=/consul/config/ -data-dir=/consul/data -node=consul-server-1"
+    command: "consul agent -config-dir=/consul/config/ -node=consul-server-1"
 
   consul-server-2:
     image: consul:latest
     volumes:
       - ./server.json:/consul/config/server.json
-    command: "consul agent -config-dir=/consul/config/ -data-dir=/consul/data -node=consul-server-2"
+    command: "consul agent -config-dir=/consul/config/ -node=consul-server-2"
 
   consul-server-3:
     image: consul:latest
     volumes:
       - ./server.json:/consul/config/server.json
-    command: "consul agent -config-dir=/consul/config/ -data-dir=/consul/data -node=consul-server-3"
+    command: "consul agent -config-dir=/consul/config/ -node=consul-server-3"
 
   service-a:
     build: service-a/
