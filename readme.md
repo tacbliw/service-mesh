@@ -1,7 +1,7 @@
 
 # service-mesh
 
-Network design and services was taken from: https://github.com/dnivra26/envoy_servicemesh
+Network design and services was taken from: <https://github.com/dnivra26/envoy_servicemesh>
 
 ## Services
 
@@ -86,6 +86,29 @@ Golang web applications, inter-service communication, used for PoC.
 
 #### Consul service with sidecar
 
+With local upstream
+
+```json
+{
+  "service": {
+    "name": "service-b",
+    "tags": [
+      "go",
+      "production"
+    ],
+    "port": 8788,
+    "connect": { "sidecar_service": {} },
+    "check": {
+      "id": "service-b",
+      "name": "service-b TCP on port 8788",
+      "tcp": "service-b:8788",
+      "interval": "10s",
+      "timeout": "1s"
+    }
+  }
+}
+```
+
 With remote upstream
 
 ```json
@@ -124,36 +147,13 @@ With remote upstream
 }
 ```
 
-With local upstream
-
-```json
-{
-  "service": {
-    "name": "service-b",
-    "tags": [
-      "go",
-      "production"
-    ],
-    "port": 8788,
-    "connect": { "sidecar_service": {} },
-    "check": {
-      "id": "service-b",
-      "name": "service-b TCP on port 8788",
-      "tcp": "service-b:8788",
-      "interval": "10s",
-      "timeout": "1s"
-    }
-  }
-}
-```
-
 ## Commands
 
 ### Consul agent
 
-Consul agent must be up first. When turned on, it will continuously try to connect and join the configured cluster. 
+Consul agent must be up first. When turned on, it will continuously try to connect and join the configured cluster.
 
-Consul server instance that have `"server": true` will try to elect a master node if the cluster have more than 1 server. `"bootstrap_expect"` have to be set to the number of instances.
+Consul server instances that have `"server": true` will try to elect a master node if the cluster have more than 1 server. `"bootstrap_expect"` have to be set to the number of instances.
 
 ```sh
 consul agent -config-dir /consul/config
