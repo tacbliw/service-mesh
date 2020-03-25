@@ -8,6 +8,7 @@ services:
       - "consul-server-1"
       - "consul-server-2"
       - "consul-server-3"
+
   consul-server-1:
     image: consul:latest
     ports:
@@ -31,7 +32,6 @@ services:
 
   service-a:
     build: service-a/
-    ports:
     volumes:
       - ./service-a/consul:/consul/config
     depends_on: 
