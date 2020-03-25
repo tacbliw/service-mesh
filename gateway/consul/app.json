@@ -12,7 +12,7 @@
         "proxy": {
           "upstreams": [
             {
-              "destination_name": "flask",
+              "destination_name": "service-a",
               "local_bind_port": 5000
             }
           ]

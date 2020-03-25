@@ -4,6 +4,10 @@ services:
     build: gateway/
     ports:
       - "80:80"
+    depends_on: 
+      - "consul-server-1"
+      - "consul-server-2"
+      - "consul-server-3"
   consul-server-1:
     image: consul:latest
     ports:

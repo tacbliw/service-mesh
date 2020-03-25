@@ -1,33 +1,33 @@
 {
-    "bootstrap_expect": 3,
-    "bind_addr": "0.0.0.0",
-    "client_addr": "0.0.0.0",
-    "datacenter": "dc1",
-    "data_dir": "/consul/data",
-    "domain": "consul",
-    "enable_script_checks": true,
-    "dns_config": {
-        "enable_truncate": true,
-        "only_passing": true
-    },
-    "enable_syslog": false,
-    "encrypt": "goplCZgdmOFMZ2Q43To0jw==",
-    "leave_on_terminate": true,
-    "log_level": "INFO",
-    "rejoin_after_leave": true,
-    "server": true,
-    "connect": {
-        "enabled": true
-    },
-    "start_join": [
-        "consul-server-1:8301",
-        "consul-server-2:8301",
-        "consul-server-3:8301"
-    ],
-    "retry_join": [
-        "consul-server-1:8301",
-        "consul-server-2:8301",
-        "consul-server-3:8301"
-    ],
-    "ui": true
+  "bootstrap_expect": 3,
+  "bind_addr": "0.0.0.0",
+  "client_addr": "0.0.0.0",
+  "datacenter": "dc1",
+  "data_dir": "/consul/data",
+  "domain": "consul",
+  "enable_script_checks": true,
+  "dns_config": {
+    "enable_truncate": true,
+    "only_passing": true
+  },
+  "enable_syslog": false,
+  "encrypt": "goplCZgdmOFMZ2Q43To0jw==",
+  "leave_on_terminate": true,
+  "log_level": "INFO",
+  "rejoin_after_leave": true,
+  "server": true,
+  "connect": {
+    "enabled": true
+  },
+  "start_join": [
+    "consul-server-1:8301",
+    "consul-server-2:8301",
+    "consul-server-3:8301"
+  ],
+  "retry_join": [
+    "consul-server-1:8301",
+    "consul-server-2:8301",
+    "consul-server-3:8301"
+  ],
+  "ui": true
 }
