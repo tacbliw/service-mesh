@@ -1,0 +1,31 @@
+{
+  "service": {
+  "name": "nginx",
+    "tags": [
+      "gateway",
+      "nginx",
+      "production"
+    ],
+    "port": 80,
+    "connect": { 
+      "sidecar_service": {
+        "proxy": {
+          "upstreams": [
+            {
+              "destination_name": "flask",
+              "local_bind_port": 5000
+            }
+          ]
+        }
+      } 
+    },
+    "check": {
+      "id": "nginx",
+      "name": "nginx TCP on port 80",
+      "tcp": "nginx:80",
+      "interval": "10s",
+      "timeout": "1s"
+    }
+  }
+}
+  

@@ -23,8 +23,8 @@
     "consul-server-3:8301"
   ],
   "retry_join": [
-      "consul-server-1:8301",
-      "consul-server-2:8301",
-      "consul-server-3:8301"
+    "consul-server-1:8301",
+    "consul-server-2:8301",
+    "consul-server-3:8301"
   ]
 }

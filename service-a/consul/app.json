@@ -12,11 +12,11 @@
           "upstreams": [
             {
               "destination_name": "service-b",
-              "local_bind_port": 8788
+              "local_bind_port": 5000
             },
             {
               "destination_name": "service-c",
-              "local_bind_port": 8791
+              "local_bind_port": 5001
             }
           ]
         }
@@ -25,7 +25,7 @@
     "check": {
       "id": "service-a",
       "name": "service-a TCP on port 80",
-      "tcp": "service-a:80",
+      "tcp": "localhost:80",
       "interval": "10s",
       "timeout": "1s"
     }

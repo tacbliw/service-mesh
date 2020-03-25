@@ -5,12 +5,12 @@
       "go",
       "production"
     ],
-    "port": 8788,
+    "port": 80,
     "connect": { "sidecar_service": {} },
     "check": {
       "id": "service-b",
-      "name": "service-b TCP on port 8788",
-      "tcp": "service-b:8788",
+      "name": "service-b TCP on port 80",
+      "tcp": "localhost:80",
       "interval": "10s",
       "timeout": "1s"
     }

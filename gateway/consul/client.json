@@ -5,10 +5,10 @@
   "encrypt": "goplCZgdmOFMZ2Q43To0jw==",
   "data_dir": "/consul/data",
   "log_level": "INFO",
-  "node_name": "service-c-node",
+  "node_name": "nginx-consul-client",
   "server": false,
   "ui": false,
-  "leave_on_terminate": false,
+  "leave_on_terminate": true,
   "skip_leave_on_interrupt": true,
   "rejoin_after_leave": true,
   "connect": {
@@ -18,13 +18,10 @@
     "grpc": 8502
   },
   "start_join": [
-    "consul-server-1:8301",
-    "consul-server-2:8301",
-    "consul-server-3:8301"
+    "consul-server:8301"
   ],
   "retry_join": [
-    "consul-server-1:8301",
-    "consul-server-2:8301",
-    "consul-server-3:8301"
+    "consul-server:8301"
   ]
 }
+  
