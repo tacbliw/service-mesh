@@ -1,5 +1,5 @@
 #!/bin/sh
-nginx -t && nginx -g "daemon off;" 
+nginx -t && nginx
 mkdir /consul/data
 sleep 10
 consul agent -config-dir /consul/config &
