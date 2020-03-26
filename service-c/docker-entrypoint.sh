@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ -z ${NODE} ]; then
-    NODE=service_b_${HOSTNAME}
+    NODE=service_c_${HOSTNAME}
 fi
 go run main.go &
 sleep 10
