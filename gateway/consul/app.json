@@ -22,7 +22,7 @@
     "check": {
       "id": "nginx",
       "name": "nginx TCP on port 80",
-      "tcp": "nginx:80",
+      "tcp": "localhost:80",
       "interval": "10s",
       "timeout": "1s"
     }
