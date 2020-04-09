@@ -7,7 +7,7 @@ fi
 CONSUL_PID=0
 term_handler () {
     if [ ${CONSUL_PID} -ne 0 ]; then
-        kill -SIGTERM "${CONSUL_PID}"
+        kill "${CONSUL_PID}"
         wait "${CONSUL_PID}"
     fi
     exit 143;
