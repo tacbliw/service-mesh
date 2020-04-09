@@ -1,9 +1,23 @@
 #!/bin/sh
 if [ -z ${NODE} ]; then
-    NODE=service_b_${HOSTNAME}
+    NODE=service-b-${HOSTNAME}
 fi
+
+# setting up SIGTERM handler for consul agent
+CONSUL_PID=0
+term_handler () {
+    if [ ${CONSUL_PID} -ne 0 ]; then
+        kill -SIGTERM "${CONSUL_PID}"
+        wait "${CONSUL_PID}"
+    fi
+    exit 143;
+}
+trap term_handler TERM
+
+# app
 go run main.go &
-sleep 10
 consul agent -config-dir /consul/config -node ${NODE} &
-sleep 10
-consul connect envoy -sidecar-for service-b
+CONSUL_PID="$!"
+sleep 5
+consul connect envoy -sidecar-for service-b &
+wait "${CONSUL_PID}"
