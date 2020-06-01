@@ -1,5 +1,5 @@
 FROM consul:latest
-FROM envoyproxy/envoy-alpine
+FROM envoyproxy/envoy-alpine:v1.14.1
 FROM nginx
 
 COPY --from=0 /bin/consul /usr/local/bin/consul
