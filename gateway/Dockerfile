@@ -7,4 +7,5 @@ COPY --from=1 /usr/local/bin/envoy /usr/local/bin/envoy
 
 COPY config/default.conf /etc/nginx/conf.d/default.conf
 COPY ["docker-entrypoint.sh", "/"]
+RUN ["chmod", "+x", "/docker-entrypoint.sh"]
 CMD ["/bin/bash", "/docker-entrypoint.sh"]
